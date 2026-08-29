@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f8ff;
+    color: #29465b;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(80, 130, 160, 0.12);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4f91b5;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #476579;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #5ca4ca;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    padding: 80px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 570px;
+    animation: fadeUp 1s ease;
+}
+
+.small-title {
+    color: #65a8c9;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    color: #31566d;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #68afd1;
+}
+
+.hero-text p {
+    font-size: 17px;
+    color: #668092;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 25px;
+    background: #70b5d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(90, 160, 195, 0.25);
+}
+
+.button:hover {
+    transform: translateY(-5px);
+}
+
+/* 3D CARD */
+
+.hero-card {
+    width: 330px;
+    height: 330px;
+    background: linear-gradient(145deg, #d9f1ff, #b8def1);
+    border-radius: 40px;
+    position: relative;
+    transform: rotate(5deg);
+    box-shadow: 25px 25px 50px rgba(70, 130, 160, 0.2);
+    animation: floating 4s ease-in-out infinite;
+}
+
+.circle {
+    width: 220px;
+    height: 220px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    position: absolute;
+    top: 45px;
+    left: 55px;
+}
+
+.house {
+    position: absolute;
+    font-size: 100px;
+    top: 105px;
+    left: 110px;
+}
+
+/* ADDRESS */
+
+.address {
+    padding: 70px 8%;
+    background: white;
+    text-align: center;
+}
+
+.address h2 {
+    color: #31566d;
+    margin-bottom: 30px;
+}
+
+.address-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.address-box div {
+    padding: 25px;
+    background: #edf8ff;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.address-box div:hover {
+    transform: translateY(-8px);
+}
+
+.address-box h3 {
+    color: #5ba2c5;
+}
+
+/* WELCOME */
+
+.welcome {
+    padding: 80px 15%;
+    text-align: center;
+}
+
+.welcome h2 {
+    font-size: 35px;
+    color: #31566d;
+    margin-bottom: 15px;
+}
+
+/* PAGE TITLE */
+
+.page-title {
+    text-align: center;
+    padding: 100px 20px 70px;
+    background: linear-gradient(135deg, #dff4ff, #f5fbff);
+}
+
+.page-title p:first-child {
+    color: #62a8ca;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.page-title h1 {
+    font-size: 50px;
+    color: #31566d;
+    margin: 10px 0;
+}
+
+/* CONTENT */
+
+.content {
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.content-card {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(80, 130, 160, 0.1);
+    transition: 0.3s;
+}
+
+.content-card:hover {
+    transform: translateY(-8px);
+}
+
+.content-card h2 {
+    color: #4f98bc;
+    margin-bottom: 15px;
+}
+
+.quote {
+    margin: 20px 8% 80px;
+    padding: 50px;
+    text-align: center;
+    background: #dff3ff;
+    border-radius: 30px;
+}
+
+/* CARDS */
+
+.cards,
+.environment,
+.documentation {
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.facility-card,
+.environment-card,
+.photo-card {
+    background: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(80, 130, 160, 0.1);
+    transition: 0.4s;
+}
+
+.facility-card:hover,
+.environment-card:hover,
+.photo-card:hover {
+    transform: translateY(-12px) rotateX(3deg);
+    box-shadow: 0 20px 40px rgba(70, 140, 180, 0.2);
+}
+
+.icon,
+.environment-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.facility-card h2,
+.environment-card h2,
+.photo-card h2 {
+    color: #4d94b8;
+    margin-bottom: 10px;
+}
+
+/* PHOTO */
+
+.photo-placeholder {
+    height: 160px;
+    background: linear-gradient(135deg, #dff4ff, #c3e5f5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+/* ANIMATION */
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-card {
+        width: 260px;
+        height: 260px;
+    }
+
+    .circle {
+        width: 170px;
+        height: 170px;
+        left: 45px;
+    }
+
+    .house {
+        font-size: 75px;
+        top: 85px;
+        left: 90px;
+    }
+
+    .address-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content,
+    .cards,
+    .environment,
+    .documentation {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title h1 {
+        font-size: 38px;
+    }
+}
